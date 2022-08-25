@@ -19,7 +19,7 @@ export default function Nav() {
                         <ul>
                             <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
                             <li><a className="nav-link scrollto" href="#services">Search Places</a></li>
-                            <li><a className="nav-link scrollto" href="#Registration">Register</a></li>
+                            <li><a className="nav-link scrollto" href="https://creator.voiceflow.com/prototype/63076b1de2683573da9998b1" target="_blank">Help</a></li>
                             <li><a className="nav-link scrollto " href="#about">About</a></li>
                             
 
