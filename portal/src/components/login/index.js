@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import fire from './fire';
 import Login from './Login';
 import Home from './Home';
+import { getAuth, onAuthStateChanged } from "firebase/auth"
+const auth = getAuth(fire)
 class LoginApp extends Component{
   constructor(props)
   {
@@ -15,7 +17,7 @@ class LoginApp extends Component{
     this.authListener();
   }
   authListener(){
-    fire.auth().onAuthStateChanged((user)=>{
+    auth.onAuthStateChanged((user)=>{
       if(user)
       {
         this.setState({user})

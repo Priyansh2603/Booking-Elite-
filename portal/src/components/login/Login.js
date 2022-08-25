@@ -1,7 +1,9 @@
 import React , { Component } from "react";
 import fire from "./fire";
 import { Link } from 'react-router-dom';
+import { getAuth, onAuthStateChanged } from "firebase/auth"
 
+const auth = getAuth(fire)
 class Login extends Component{
 constructor(props)
 {
@@ -16,7 +18,7 @@ constructor(props)
 }
 login(e){
     e.preventDefault();
-    fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{
+    auth.signInWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{
         console.log(u)
     }).catch((err)=>{
         console.log(err);
@@ -24,7 +26,7 @@ login(e){
 }
 signup(e){
     e.preventDefault();
-    fire.auth().createUserWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{
+    auth.createUserWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{
         console.log(u)
     }).catch((err)=>{
         console.log(err);
