@@ -9,38 +9,38 @@ export default function Why() {
 
             <div className="col-lg-4 col-md-6 content-item">
                 <span>01</span>
-                <h4>Lorem Ipsum</h4>
-                <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+                <h4>Theme</h4>
+                <p>Disability is an umbrella term, Covering Impairments, activity limitation and participation restriction </p>
             </div>
 
             <div className="col-lg-4 col-md-6 content-item">
                 <span>02</span>
-                <h4>Repellat Nihil</h4>
-                <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+                <h4>Equality</h4>
+                <p>Disable people face social stigma of inequality and descrimination on daily basis.</p>
             </div>
 
             <div className="col-lg-4 col-md-6 content-item">
                 <span>03</span>
-                <h4> Ad ad velit qui</h4>
-                <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+                <h4>Feasibility</h4>
+                <p>Chetna is feasible for user as well as owner of the suitable property as there is no centralized portal for storing information. </p>
             </div>
 
             <div className="col-lg-4 col-md-6 content-item">
                 <span>04</span>
-                <h4>Repellendus molestiae</h4>
-                <p>Inventore quo sint a sint rerum. Distinctio blanditiis deserunt quod soluta quod nam mider lando casa</p>
+                <h4>Praticibility</h4>
+                <p>Chetna is an easy to use plateform for the disable people it has a user friendly UI, Provide an interactive map based Navigation.</p>
             </div>
 
             <div className="col-lg-4 col-md-6 content-item">
                 <span>05</span>
-                <h4>Sapiente Magnam</h4>
-                <p>Vitae dolorem in deleniti ipsum omnis tempore voluptatem. Qui possimus est repellendus est quibusdam</p>
+                <h4>User Experience</h4>
+                <p>Chetna provide only those places that have certain accessibility features, user can check the accessibility features of a place beforehand.</p>
             </div>
 
             <div className="col-lg-4 col-md-6 content-item">
                 <span>06</span>
-                <h4>Facilis Impedit</h4>
-                <p>Quis eum numquam veniam ea voluptatibus voluptas. Excepturi aut nostrum repudiandae voluptatibus corporis sequi</p>
+                <h4>Scale of Impact</h4>
+                <p>Our Portal is powered especially for specially abled people to access location for themself by ensuring that it works the way it is simple.  </p>
             </div>
 
         </div>

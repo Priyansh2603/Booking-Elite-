@@ -9,7 +9,7 @@ export default function Search() {
             <div className="col-lg-4 col-md-6">
                 <div className="icon-box">
                     <div className="icon"><i className="bi bi-laptop"></i></div>
-                    <h4 className="title text-justify"><a href="/login">Register </a></h4>
+                    <h4 className="title text-justify"><a href="/login">Login to Register </a></h4>
                     <p className="description "> Registration of accessible buildings/ locations by the owners.</p>
                 </div>
             </div>
