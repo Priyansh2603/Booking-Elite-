@@ -2,6 +2,7 @@ import React , { Component } from "react";
 import fire from "./fire";
 import { Link } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from "firebase/auth"
+import './login.css'
 
 const auth = getAuth(fire)
 class Login extends Component{
@@ -71,7 +72,9 @@ render()
             
             </form>
         {/* <Link to="#"></Link> */}
+        <div id="back">
         <Link to="/">Back to Home</Link>
+        </div>
         </div>
     )
 }

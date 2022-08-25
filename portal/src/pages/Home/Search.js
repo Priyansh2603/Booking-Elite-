@@ -16,14 +16,14 @@ export default function Search() {
             <div className="col-lg-4 col-md-6">
                 <div className="icon-box">
                     <div className="icon"><i className="bi bi-geo-alt"></i></div>
-                    <h4 className="title"><a href="/">Navigation</a></h4>
+                    <h4 className="title"><a href="#search2">Navigation</a></h4>
                     <p className="description">Guidance with suitable voice-based announcements to navigate and reach the place.</p>
                 </div>
             </div>
             <div className="col-lg-4 col-md-6">
                 <div className="icon-box">
                     <div className="icon"><i className="bi bi-envelope"></i></div>
-                    <h4 className="title"><a href="/">Feedback</a></h4>
+                    <h4 className="title"><a href="#contact">Feedback</a></h4>
                     <p className="description">Provide your feedback and help us improve.</p>
                 </div>
             </div>

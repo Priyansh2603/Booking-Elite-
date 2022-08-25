@@ -39,7 +39,7 @@ export default function Search() {
   // }
 
   return (
-    <div className='border my-4 rounded' >
+    <div id="search2" className='border my-4 rounded' >
       <form action="backend.php" className="rounded m-4" method="post">
         <div class="container px-5 py-24 mx-auto opacity-80 rounded  flex" style={{ backgroundColor: "#5cb874" }}>
           <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 px-5 shadow-md">
