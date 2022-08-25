@@ -31,7 +31,7 @@ class LoginApp extends Component{
   render(){
     return (
       <div>
-        {this.state.user ? (<Home user={this.user}/>) : (<Login/>)}
+        {this.state.user ? (<Home/>) : (<Login/>)}
       </div>
     );
   }
