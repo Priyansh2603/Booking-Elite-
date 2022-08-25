@@ -62,14 +62,77 @@ const Hello = () => {
                 }
             })
             var Lift;
+            var Lift_A;
+            var Lift_B;
+            var Ramp;
+            var Ramp_A;
+            var Ramp_B;
+            var Wheelchair;
+            var Wheelchair_A;
+            var Wheelchair_B;
+            var Washroom;
+            var Washroom_A;
+            var Washroom_B;
+            var Braille;
+            var Braille_A;
+            var Braille_B;
             const Name = users.map((i)=>{
     // console.log(i)
     if(i.Property===value){
         if(i.Lift===""){
             Lift = "Unavailable";
+            Lift_A = "Unaccessible";
+            Lift_B = "     ";
+
         }
         else{
-            Lift= "available";
+            Lift= "Available";
+            Lift_A= "Accessible";
+            Lift_B= "Watch videos/photos";
+        }
+        if(i.Ramp===""){
+            Ramp = "Unavailable";
+            Ramp_A = "Unaccessible";
+            Ramp_B = "         ";
+
+        }
+        else{
+            Ramp= "Available";
+            Ramp_A= "Accessible";
+            Ramp_B = "Watch videos/photos";
+        }
+        if(i.Washroom===""){
+            Washroom = "Unavailable";
+            Washroom_A = "Unaccessible";
+            Washroom_B= "      ";
+
+        }
+        else{
+            Washroom= "Available";
+            Washroom_A= "Accessible";
+            Washroom_B= "Watch videos/photos";
+        }
+        if(i.Wheelchair===""){
+            Wheelchair = "Unavailable";
+            Wheelchair_A = "Unaccessible";
+            Wheelchair_B= "        ";
+
+        }
+        else{
+            Wheelchair= "Available";
+            Wheelchair_A= "Accessible";
+            Wheelchair_B= "Watch videos/photos";
+        }
+        if(i.Braille_Signage===""){
+            Braille = "Unavailable";
+            Braille_A = "Unaccessible";
+            Braille_B = "";
+
+        }
+        else{
+            Braille= "Available";
+            Braille_A= "Accessible";
+            Braille_B= "Watch videos/photos";
         }
     return (<>
         <h1>{i.Property_Name}</h1>
@@ -80,7 +143,7 @@ const Hello = () => {
    
     
     <div>
-        <h1><span id="property_type1"></span></h1>
+        <h1><span id="property_type1">{Lift}</span></h1>
         <h2><span id="property_type2"></span></h2>
         <table>
           <thread>
@@ -119,52 +182,52 @@ const Hello = () => {
         <tbody>
           <tr>
             <td>Lift</td>
-            <td id='f1'></td>
+            <td id='f1'>{Lift}</td>
             <td id="A1">
-              
+              {Lift_A}
             </td>
             <td>
-            <a onClick="link1()" id="vid1"></a>
+            <a href="" id="vid1"></a>
             </td>
           </tr>
           <tr>
             <td>Ramp</td>
-            <td id='f2'></td>
+            <td id='f2'>{Ramp}</td>
             <td id="A2">
-              
+              {Ramp_A}
             </td>
             <td>
-            <a onClick="link2()" id="vid2"></a>
+            <a onClick="link2()" id="vid2">{Ramp_B}</a>
             </td>
           </tr>
           <tr>
-            <td>WheelChair</td>
-            <td id='f3'></td>
+            <td>Wheelchair</td>
+            <td id='f3'>{Wheelchair}</td>
             <td id="A3">
-              
+              {Washroom_A}
             </td>
             <td>
-            <a onClick="link3()" id="vid3"></a>
+            <a onClick="link3()" id="vid3">{Wheelchair_B}</a>
             </td>
           </tr>
           <tr>
             <td>WashRoom</td>
-            <td id='f4'></td>
+            <td id='f4'>{Washroom}</td>
             <td id="A4">
-              
+              {Washroom_A}
             </td>
             <td>
-            <a onClick="link4()" id="vid4"></a>
+            <a onClick="link4()" id="vid4">{Washroom_B}</a>
             </td>
           </tr>
           <tr>
             <td>Braille Synage</td>
-            <td id='f5'></td>
+            <td id='f5'>{Braille}</td>
             <td id="A5">
-              
+              {Braille_A}
             </td>
             <td>
-            <a onClick="link5()" id="vid5"></a>
+            <a onClick="link5()" id="vid5">{Braille_B}</a>
             </td>
           </tr>
           
