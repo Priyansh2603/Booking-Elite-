@@ -24,7 +24,7 @@ export default function Services() {
                         </svg>
                         <i className="bx bxs-institution"></i>
                     </div>
-                    <h4><a href="https://disabilityaffairs.gov.in/content/">Ministry Of Divyangjan</a></h4>
+                    <h4><a href="https://disabilityaffairs.gov.in/content/">DEPD (Ministry Of Divyangjan)</a></h4>
                     <p>The Department of Empowerment of Persons with Disabilities in the Ministry of Social Justice & Empowerment facilitates empowerment of the persons with disabilities.</p>
                 </div>
             </div>

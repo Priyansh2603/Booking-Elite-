@@ -7,7 +7,7 @@ export default function About() {
 
         <div className="section-title">
             <h2>About Us</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <p>"A bend in the road is not the  end of the road unless you fail to make the turn"  -Helen Keller</p>
         </div>
 
         <div className="row">
@@ -15,20 +15,19 @@ export default function About() {
                 <img src="assets/img/slide/slide-b.jpg" className="img-fluid" alt="" />
             </div>
             <div className="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                <h3>We are Chetna.  The kind of people who are relentless about our mission to help specially abled people to go anywhere and get anything.</h3>
                 <p className="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                Movement is what we power.
                 </p>
                 <ul>
-                    <li><i className="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                    <li><i className="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                    <li><i className="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                    <li><i className="bi bi-check-circled"></i>It pushes us to constantly reimagine how we can help specially abled people to move better, and reach all the places they want to go for all the things they want to get . </li>
+                    <li><i className="bi bi-check-circled"></i> We believe in a world where movement should be accessible to all . </li>
+                    <li><i className="bi bi-check-circled"></i> We are a map - based platform widely accessible for storing and sharing information about buildings/ offices/ schools marketplaces having accessibility provision that are helpful for the specially abled .</li>
                 </ul>
                 <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum
+We guide the specially abled people with suitable voice- based announcements to navigate and reach the places.
+We enable the owners to register their property that have appropriate accessibility provision for the specially abled.
+Chetna gives you an instant overview of your nearest accessible location on an interactive map. It is powered by us for specially abled users to access location for themselves, ensuring it works the way it shared it is easy and simple to use.
                 </p>
             </div>
         </div>
