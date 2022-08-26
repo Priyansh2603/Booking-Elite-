@@ -5,9 +5,9 @@ export default function About() {
     <div><section id="about" className="about">
     <div className="container">
 
-        <div className="section-title">
+        <div className="section-title " id='about1'>
             <h2>About Us</h2>
-            <p>"A bend in the road is not the  end of the road unless you fail to make the turn"  -Helen Keller</p>
+            <p color='black' >"A bend in the road is not the  end of the road unless you fail to make the turn"  -Helen Keller</p>
         </div>
 
         <div className="row">
