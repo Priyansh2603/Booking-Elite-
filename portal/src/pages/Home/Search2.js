@@ -67,8 +67,8 @@ export default function Search() {
        Gender :    Male <input name="Gender" type="radio"/>    Female <input name="Gender" type="radio" />    Other <input name="Gender" type="radio" />
       </div> */}
 
-            <div className='text-center'><a ><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M5.5 10a.5.5 0 0 0-1 0a5.5 5.5 0 0 0 5 5.478V17.5a.5.5 0 0 0 1 0v-2.022a5.5 5.5 0 0 0 5-5.478a.5.5 0 0 0-1 0a4.5 4.5 0 1 1-9 0Zm7.5 0a3 3 0 0 1-6 0V5a3 3 0 0 1 6 0v5Z" /></svg></a>
-              <p mb-4>Use voice</p></div>
+            {/* <div className='text-center'><a ><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M5.5 10a.5.5 0 0 0-1 0a5.5 5.5 0 0 0 5 5.478V17.5a.5.5 0 0 0 1 0v-2.022a5.5 5.5 0 0 0 5-5.478a.5.5 0 0 0-1 0a4.5 4.5 0 1 1-9 0Zm7.5 0a3 3 0 0 1-6 0V5a3 3 0 0 1 6 0v5Z" /></svg></a>
+              <p mb-4>Use voice</p></div> */}
 
             <div className='text-center'>
               <Link to={`/searchplaces/${search}`}>
