@@ -1,4 +1,5 @@
-import React , { Component } from "react";
+import React , { Component} from "react";
+import { Link } from "react-router-dom";
 import fire from "./fire";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
@@ -15,8 +16,10 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <h1>Hey,{this.user}</h1>
+                <h1>You've Logged in successfully.</h1>
                 <button onClick={this.logout}>Logout</button>
+               <button> <Link to="/login/register">Regiter Your Propery </Link></button>
+                <button><Link to="/">Back to Home</Link></button>
             </div>
         );
     }

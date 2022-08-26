@@ -32,7 +32,7 @@ class LoginApp extends Component{
   render(){
     return (
       <div>
-        {this.state.user ? (<Registration/>) : (<Login/>)}
+        {this.state.user ? (<Home/>) : (<Login/>)}
       </div>
     );
   }

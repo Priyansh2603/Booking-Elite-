@@ -4,8 +4,8 @@ import { collection, getDocs, addDoc } from 'firebase/firestore';
 import { db } from "../components/Main/firebase-config";
 import { Link } from 'react-router-dom';
 // import "./output.css"
-// import "./Page2/output.css"
-let name=["Hey","Hi","Hello"];
+import "./Page2/output.css";
+let name = ["Hey", "Hi", "Hello"];
 // const Name = name.map((i)=>{
 //     console.log(i)
 //     return (<>
@@ -20,30 +20,31 @@ let name=["Hey","Hi","Hello"];
 
 const Hello = () => {
     const { value } = useParams();
-    // console.log(value); 
+    // console.log(value);
 
     const useCollection = collection(db, 'users-1')
     const [users, setUser] = useState([])
     const [feed, setFeed]=useState('')
+    const [newProp, setProp]=useState('')
     React.useEffect(() => {
         const getUsers = async () => {
             const data = await getDocs(useCollection);
-            console.log(data)
-            console.log(data.docs)
-            setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-        }
+            console.log(data);
+            console.log(data.docs);
+            setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        };
         getUsers();
         // find();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    const updateUser=async()=>{
-        let collectionRef = db.collection('users-1');
+    // const updateUser=async()=>{
+    //     let collectionRef = db.collection('users-1');
 
 
-        collectionRef.update({feedback:feed}).then(res => {
-        console.log(`Document updated at ${res.updateTime}`);
-      });
-    }
+    //     collectionRef.update({feedback:feed}).then(res => {
+    //     console.log(`Document updated at ${res.updateTime}`);
+    //   });
+    // }
 
     // const find = () => {
     //     // eslint-disable-next-line no-lone-blocks
@@ -71,6 +72,10 @@ const Hello = () => {
             
                 }
             })
+            const craeteUser = async () => {
+              await addDoc(useCollection, { Property_Name : newProp, Feedback : feed});
+              alert("Your Valuable feedback has been recorded!");
+              }
             var Lift;
             var Lift_A;
             var Lift_B;
@@ -86,69 +91,86 @@ const Hello = () => {
             var Braille;
             var Braille_A;
             var Braille_B;
+            var l_i;
+            var r_i;
+            var wh_i;
+            var wc_i;
+            var br_i;
             const Name = users.map((i)=>{
     // console.log(i)
     if(i.Property===value){
         if(i.Lift===""){
-            Lift = "Unavailable";
+            Lift = "Unavailable ";
             Lift_A = "Unaccessible";
             Lift_B = "     ";
+          l_i="bi-file-earmark-excel-fill";
+
+            
 
         }
         else{
-            Lift= "Available";
+            Lift= "Available ";
             Lift_A= "Accessible";
             Lift_B= "Watch videos/photos";
+          l_i="bi-check-circle-fill";
         }
         if(i.Ramp===""){
             Ramp = "Unavailable";
             Ramp_A = "Unaccessible";
             Ramp_B = "         ";
+           r_i="bi-file-earmark-excel-fill";
 
         }
         else{
             Ramp= "Available";
             Ramp_A= "Accessible";
             Ramp_B = "Watch videos/photos";
+            r_i="bi-check-circle-fill";
         }
         if(i.Washroom===""){
             Washroom = "Unavailable";
             Washroom_A = "Unaccessible";
             Washroom_B= "      ";
+          wc_i="bi-file-earmark-excel-fill";
 
         }
         else{
             Washroom= "Available";
             Washroom_A= "Accessible";
             Washroom_B= "Watch videos/photos";
+            wc_i="bi-check-circle-fill";
         }
         if(i.Wheelchair===""){
             Wheelchair = "Unavailable";
             Wheelchair_A = "Unaccessible";
             Wheelchair_B= "        ";
+          wh_i="bi-file-earmark-excel-fill";
 
         }
         else{
             Wheelchair= "Available";
             Wheelchair_A= "Accessible";
             Wheelchair_B= "Watch videos/photos";
+            wh_i="bi-check-circle-fill";
         }
         if(i.Braille_Signage===""){
             Braille = "Unavailable";
             Braille_A = "Unaccessible";
             Braille_B = "";
+            br_i="bi-file-earmark-excel-fill";
 
         }
         else{
             Braille= "Available";
             Braille_A= "Accessible";
             Braille_B= "Watch videos/photos";
+          br_i="bi-check-circle-fill";
         }
     return (<>
         <span><h1>Place: {i.Property_Name}</h1></span>
-        <span><h3>Address: {i.Address}</h3></span>
-        <h3>Contact: {i.Contact}</h3>
-        <h4>Emergency Contact: {i.Emg}</h4>
+        <span><h1>Address: {i.Address}</h1></span>
+        <h1>Contact: {i.Contact}</h1>
+        <h1>Emergency Contact: {i.Emg}</h1>
            
             <section>
    
@@ -176,7 +198,7 @@ const Hello = () => {
     </div>
 
     <div class="tbl-header">
-      <table cellpadding="0" cellspacing="0" border="0">
+      <table cellpadding="0" cellspacing="0">
         <thead>
           <tr>
             <th>Facility(सुविधा)</th>
@@ -192,9 +214,9 @@ const Hello = () => {
       <table cellpadding="0" cellspacing="0" border="0">
         <tbody>
           <tr>
-            <td>Lift</td>
-            <td id='f1'>{Lift}</td>
-            <td id="A1">
+            <td className='bi-door-closed-fill'>Lift</td>
+            <td id='f1' className={l_i}   >{Lift}</td>
+            <td id="A1" className={l_i}   >
               {Lift_A}
             </td>
             <td>
@@ -202,29 +224,29 @@ const Hello = () => {
             </td>
           </tr>
           <tr>
-            <td>Ramp</td>
-            <td id='f2'>{Ramp}</td>
-            <td id="A2">
+            <td className="bi-alt"> Ramp</td>
+            <td className={r_i} >{Ramp}</td>
+            <td id="A2" className={r_i} >
               {Ramp_A}
             </td>
             <td>
-            <a onClick="link2()" id="vid2">{Ramp_B}</a>
+            <a onClick="link2()"  id="vid2">{Ramp_B}</a>
             </td>
           </tr>
           <tr>
             <td>Wheelchair</td>
-            <td id='f3'>{Wheelchair}</td>
-            <td id="A3">
-              {Washroom_A}
+            <td id='f3' className={wh_i} >{Wheelchair}</td>
+            <td id="A3" className={wh_i} >
+              {Wheelchair_A}
             </td>
             <td>
             <a onClick="link3()" id="vid3">{Wheelchair_B}</a>
             </td>
           </tr>
           <tr>
-            <td>WashRoom</td>
-            <td id='f4'>{Washroom}</td>
-            <td id="A4">
+            <td className='bi-badge-wc-fill'>WashRoom</td>
+            <td id='f4' className={wc_i } >{Washroom}</td>
+            <td id="A4" className={wc_i} >
               {Washroom_A}
             </td>
             <td>
@@ -232,9 +254,9 @@ const Hello = () => {
             </td>
           </tr>
           <tr>
-            <td>Braille Signage</td>
-            <td id='f5'>{Braille}</td>
-            <td id="A5">
+            <td className="bi-grip-horizontal green">Braille Signage</td>
+            <td id='f5' className={br_i} >{Braille}</td>
+            <td id="A5" className={br_i} >
               {Braille_A}
             </td>
             <td>
@@ -246,16 +268,20 @@ const Hello = () => {
       </table>
       
     </div>
-    <button className="btn btn-info btn-lg ms-2"><a href={`http://maps.google.com/?q=${i.Address}`} target="_blank">Go to Location</a></button>
-            <button className="btn btn-warning btn-lg ms-2"><a href={`https://book.olacabs.com/?serviceType=p2p&when=NOW&utm_source=widget_on_olacabs&pickup_name=Current%20Location&drop_lat=10.8945458&drop_lng=76.9970671&drop_name="${i.Address}"&pickup=current_location`} target="_blank">Cab Service</a></button>
-            <button className="btn btn-success btn-lg ms-2">Review And Feedback</button>
+    <button className="btn btn-info btn-lg ms-2"><a className='cab' href={`http://maps.google.com/?q=${i.Address}`} target="_blank">Go to Location</a></button>
+            <button className="btn btn-warning btn-lg ms-2"><a className='cab' href={`https://book.olacabs.com/?serviceType=p2p&when=NOW&utm_source=widget_on_olacabs&pickup_name=Current%20Location&drop_lat=10.8945458&drop_lng=76.9970671&drop_name="${i.Address}"&pickup=current_location`} target="_blank">Cab Service</a></button>
+            <button className="btn btn-success btn-lg ms-2"> <a href='https://hilarious-entremet-b26680.netlify.app/' target="_blank" className='h-50'><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M5.5 10a.5.5 0 0 0-1 0a5.5 5.5 0 0 0 5 5.478V17.5a.5.5 0 0 0 1 0v-2.022a5.5 5.5 0 0 0 5-5.478a.5.5 0 0 0-1 0a4.5 4.5 0 1 1-9 0Zm7.5 0a3 3 0 0 1-6 0V5a3 3 0 0 1 6 0v5Z" /></svg></a>
+              </button>
     {/* <textarea></textarea> */}
-   <form> <div className="form-outline mb-4">
-        <textarea col="500" rows="3" className="form-control form-control-lg"></textarea>
-    </div>
-    <button type='reset' onClick={updateUser} onChange={(event) => {
+    <form> <h1 className='.font-weight-bold'>Feedback</h1><div className="form-outline mb-2">
+    <input className="form-control form-control-lg" type="text" onChange={(event) => {
+                            setProp(event.target.value)
+                          }}  placeholder="Enter Property Name"/>
+        <textarea col="500" rows="3" onChange={(event) => {
                             setFeed(event.target.value)
-                          }}>Post Feedback</button></form>
+                          }} className="form-control form-control-lg" placeholder='Leave Your Feedback Here!'></textarea>
+    </div>
+    <button type='reset'className="btn btn-warning btn-lg ms-2" onClick={craeteUser} >Post Feedback</button></form>
   </section>
             </>
         )
@@ -272,18 +298,18 @@ const Hello = () => {
         // }
     // }
 
-
-return (<>
-{/* <h1>Hindustan Institute of {}</h1>
+    return (
+        <>
+            {/* <h1>Hindustan Institute of {}</h1>
 <h3>Address:- Coimbatore, Tamilnadu</h3>
 <h3>Contact:- 1234515544</h3> */}
-    {/* <button className="btn btn-info btn-lg ms-2">Go to Location</button>
+            {/* <button className="btn btn-info btn-lg ms-2">Go to Location</button>
     <button className="btn btn-warning btn-lg ms-2">Cab Service</button> */}
-    {/* <Name ></Name> */}
-    {Name}
-    </>
-)
-}
+            {/* <Name ></Name> */}
+            {Name}
+        </>
+    );
+};
 
 
 export default Hello;
