@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import fire from './fire';
 import Login from './Login';
 import Home from './Home';
+import Registration from './Registration'
 import { getAuth, onAuthStateChanged } from "firebase/auth"
 const auth = getAuth(fire)
 class LoginApp extends Component{
@@ -31,7 +32,7 @@ class LoginApp extends Component{
   render(){
     return (
       <div>
-        {this.state.user ? (<Home/>) : (<Login/>)}
+        {this.state.user ? (<Registration/>) : (<Login/>)}
       </div>
     );
   }
