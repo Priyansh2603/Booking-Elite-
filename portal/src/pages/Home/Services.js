@@ -37,7 +37,7 @@ export default function Services() {
                         </svg>
                         <i className="bx bx-run"></i>
                     </div>
-                    <h4><a href="/">Emergency Police Service</a></h4>
+                    <h4><a href="https://www.handicareindia.org/handicare-helpline/">Emergency Police Service</a></h4>
                     <p>The Indian Police Service is a central civil service under the All India Services.</p>
                 </div>
             </div>
@@ -50,7 +50,7 @@ export default function Services() {
                         </svg>
                         <i className="bx bx-plus-medical"></i>
                     </div>
-                    <h4><a href="/">Hospital Helpine Number</a></h4>
+                    <h4><a href="https://www.nhp.gov.in/national-health-helpline-toll-free-number-1800-180-1104-nhp-voice-web_pg">Hospital Helpine Number</a></h4>
                     <p>A hospital is a health care institution providing patient treatment with specialized health science and auxiliary healthcare staff and medical equipment.</p>
                 </div>
             </div>
