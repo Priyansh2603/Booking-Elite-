@@ -64,7 +64,7 @@ function App() {
                     <div className="col-xl-6 d-none d-xl-block">
                       <img className='img-fluid' src='https://unsplash.com/developers' />
                     </div>
-                    <div className="col-xl-6">
+                    <div className="col-xl-12">
                       <div className="card-body p-md-5 text-black">
                         <h2 className="mb-2 text-uppercase">Owner's Registration Form</h2>
                         {/* <h6 className="mb-4 ">Curious which components explicitly require our JavaScript and Popper? Click the show components link below. </h6> */}
