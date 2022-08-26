@@ -86,63 +86,80 @@ const Hello = () => {
             var Braille;
             var Braille_A;
             var Braille_B;
+            var l_i;
+            var r_i;
+            var wh_i;
+            var wc_i;
+            var br_i;
             const Name = users.map((i)=>{
     // console.log(i)
     if(i.Property===value){
         if(i.Lift===""){
-            Lift = "Unavailable";
+            Lift = "Unavailable ";
             Lift_A = "Unaccessible";
             Lift_B = "     ";
+          l_i="bi-file-earmark-excel-fill";
+
+            
 
         }
         else{
-            Lift= "Available";
+            Lift= "Available ";
             Lift_A= "Accessible";
             Lift_B= "Watch videos/photos";
+          l_i="bi-check-circle-fill";
         }
         if(i.Ramp===""){
             Ramp = "Unavailable";
             Ramp_A = "Unaccessible";
             Ramp_B = "         ";
+           r_i="bi-file-earmark-excel-fill";
 
         }
         else{
             Ramp= "Available";
             Ramp_A= "Accessible";
             Ramp_B = "Watch videos/photos";
+            r_i="bi-check-circle-fill";
         }
         if(i.Washroom===""){
             Washroom = "Unavailable";
             Washroom_A = "Unaccessible";
             Washroom_B= "      ";
+          wc_i="bi-file-earmark-excel-fill";
 
         }
         else{
             Washroom= "Available";
             Washroom_A= "Accessible";
             Washroom_B= "Watch videos/photos";
+            wc_i="bi-check-circle-fill";
         }
         if(i.Wheelchair===""){
             Wheelchair = "Unavailable";
             Wheelchair_A = "Unaccessible";
             Wheelchair_B= "        ";
+          wh_i="bi-file-earmark-excel-fill";
 
         }
         else{
             Wheelchair= "Available";
             Wheelchair_A= "Accessible";
             Wheelchair_B= "Watch videos/photos";
+            wh_i="bi-check-circle-fill";
         }
         if(i.Braille_Signage===""){
             Braille = "Unavailable";
             Braille_A = "Unaccessible";
             Braille_B = "";
+            br_i="bi-file-earmark-excel-fill";
 
         }
         else{
             Braille= "Available";
             Braille_A= "Accessible";
             Braille_B= "Watch videos/photos";
+          br_i="bi-check-circle-fill";
         }
     return (<>
         <span><h1>Place: {i.Property_Name}</h1></span>
@@ -192,9 +209,9 @@ const Hello = () => {
       <table cellpadding="0" cellspacing="0" border="0">
         <tbody>
           <tr>
-            <td>Lift</td>
-            <td id='f1'>{Lift}</td>
-            <td id="A1">
+            <td className='bi-door-closed-fill'>Lift</td>
+            <td id='f1' className={l_i}   >{Lift}</td>
+            <td id="A1" className={l_i}   >
               {Lift_A}
             </td>
             <td>
@@ -202,19 +219,19 @@ const Hello = () => {
             </td>
           </tr>
           <tr>
-            <td>Ramp</td>
-            <td id='f2'>{Ramp}</td>
-            <td id="A2">
+            <td className="bi-alt"> Ramp</td>
+            <td className={r_i} >{Ramp}</td>
+            <td id="A2" className={r_i} >
               {Ramp_A}
             </td>
             <td>
-            <a onClick="link2()" id="vid2">{Ramp_B}</a>
+            <a onClick="link2()"  id="vid2">{Ramp_B}</a>
             </td>
           </tr>
           <tr>
             <td>Wheelchair</td>
-            <td id='f3'>{Wheelchair}</td>
-            <td id="A3">
+            <td id='f3' className={wh_i} >{Wheelchair}</td>
+            <td id="A3" className={wh_i} >
               {Washroom_A}
             </td>
             <td>
@@ -222,9 +239,9 @@ const Hello = () => {
             </td>
           </tr>
           <tr>
-            <td>WashRoom</td>
-            <td id='f4'>{Washroom}</td>
-            <td id="A4">
+            <td className='bi-badge-wc-fill'>WashRoom</td>
+            <td id='f4' className={wc_i } >{Washroom}</td>
+            <td id="A4" className={wc_i} >
               {Washroom_A}
             </td>
             <td>
@@ -232,9 +249,9 @@ const Hello = () => {
             </td>
           </tr>
           <tr>
-            <td>Braille Signage</td>
-            <td id='f5'>{Braille}</td>
-            <td id="A5">
+            <td className="bi-grip-horizontal green">Braille Signage</td>
+            <td id='f5' className={br_i} >{Braille}</td>
+            <td id="A5" className={br_i} >
               {Braille_A}
             </td>
             <td>
