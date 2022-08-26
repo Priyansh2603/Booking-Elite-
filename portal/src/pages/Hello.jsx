@@ -25,6 +25,7 @@ const Hello = () => {
     const useCollection = collection(db, 'users-1')
     const [users, setUser] = useState([])
     const [feed, setFeed]=useState('')
+    const [newProp, setProp]=useState('')
     React.useEffect(() => {
         const getUsers = async () => {
             const data = await getDocs(useCollection);
@@ -36,14 +37,14 @@ const Hello = () => {
         // find();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    const updateUser=async()=>{
-        let collectionRef = db.collection('users-1');
+    // const updateUser=async()=>{
+    //     let collectionRef = db.collection('users-1');
 
 
-        collectionRef.update({feedback:feed}).then(res => {
-        console.log(`Document updated at ${res.updateTime}`);
-      });
-    }
+    //     collectionRef.update({feedback:feed}).then(res => {
+    //     console.log(`Document updated at ${res.updateTime}`);
+    //   });
+    // }
 
     // const find = () => {
     //     // eslint-disable-next-line no-lone-blocks
@@ -71,6 +72,10 @@ const Hello = () => {
             
                 }
             })
+            const craeteUser = async () => {
+              await addDoc(useCollection, { Property_Name : newProp, Feedback : feed});
+              alert("Your Valuable feedback has been recorded!");
+              }
             var Lift;
             var Lift_A;
             var Lift_B;
@@ -232,7 +237,7 @@ const Hello = () => {
             <td>Wheelchair</td>
             <td id='f3' className={wh_i} >{Wheelchair}</td>
             <td id="A3" className={wh_i} >
-              {Washroom_A}
+              {Wheelchair_A}
             </td>
             <td>
             <a onClick="link3()" id="vid3">{Wheelchair_B}</a>
@@ -267,12 +272,15 @@ const Hello = () => {
             <button className="btn btn-warning btn-lg ms-2"><a href={`https://book.olacabs.com/?serviceType=p2p&when=NOW&utm_source=widget_on_olacabs&pickup_name=Current%20Location&drop_lat=10.8945458&drop_lng=76.9970671&drop_name="${i.Address}"&pickup=current_location`} target="_blank">Cab Service</a></button>
             <button className="btn btn-success btn-lg ms-2">Review And Feedback</button>
     {/* <textarea></textarea> */}
-   <form> <div className="form-outline mb-4">
-        <textarea col="500" rows="3" className="form-control form-control-lg"></textarea>
-    </div>
-    <button type='reset' onClick={updateUser} onChange={(event) => {
+    <form> <div className="form-outline mb-4">
+    <input type="text" onChange={(event) => {
+                            setProp(event.target.value)
+                          }}  placeholder="Enter Property Name"/>
+        <textarea col="500" rows="3" onChange={(event) => {
                             setFeed(event.target.value)
-                          }}>Post Feedback</button></form>
+                          }} className="form-control form-control-lg"></textarea>
+    </div>
+    <button type='reset' onClick={craeteUser} >Post Feedback</button></form>
   </section>
             </>
         )
