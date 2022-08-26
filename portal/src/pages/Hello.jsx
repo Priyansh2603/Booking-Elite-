@@ -198,7 +198,7 @@ const Hello = () => {
     </div>
 
     <div class="tbl-header">
-      <table cellpadding="0" cellspacing="0" border="0">
+      <table cellpadding="0" cellspacing="0">
         <thead>
           <tr>
             <th>Facility(सुविधा)</th>
@@ -268,19 +268,20 @@ const Hello = () => {
       </table>
       
     </div>
-    <button className="btn btn-info btn-lg ms-2"><a href={`http://maps.google.com/?q=${i.Address}`} target="_blank">Go to Location</a></button>
-            <button className="btn btn-warning btn-lg ms-2"><a href={`https://book.olacabs.com/?serviceType=p2p&when=NOW&utm_source=widget_on_olacabs&pickup_name=Current%20Location&drop_lat=10.8945458&drop_lng=76.9970671&drop_name="${i.Address}"&pickup=current_location`} target="_blank">Cab Service</a></button>
-            <button className="btn btn-success btn-lg ms-2">Review And Feedback</button>
+    <button className="btn btn-info btn-lg ms-2"><a className='cab' href={`http://maps.google.com/?q=${i.Address}`} target="_blank">Go to Location</a></button>
+            <button className="btn btn-warning btn-lg ms-2"><a className='cab' href={`https://book.olacabs.com/?serviceType=p2p&when=NOW&utm_source=widget_on_olacabs&pickup_name=Current%20Location&drop_lat=10.8945458&drop_lng=76.9970671&drop_name="${i.Address}"&pickup=current_location`} target="_blank">Cab Service</a></button>
+            <button className="btn btn-success btn-lg ms-2"> <a href='https://hilarious-entremet-b26680.netlify.app/' target="_blank" className='h-50'><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="40" height="40" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M5.5 10a.5.5 0 0 0-1 0a5.5 5.5 0 0 0 5 5.478V17.5a.5.5 0 0 0 1 0v-2.022a5.5 5.5 0 0 0 5-5.478a.5.5 0 0 0-1 0a4.5 4.5 0 1 1-9 0Zm7.5 0a3 3 0 0 1-6 0V5a3 3 0 0 1 6 0v5Z" /></svg></a>
+              </button>
     {/* <textarea></textarea> */}
-    <form> <div className="form-outline mb-4">
-    <input type="text" onChange={(event) => {
+    <form> <h1 className='.font-weight-bold'>Feedback</h1><div className="form-outline mb-2">
+    <input className="form-control form-control-lg" type="text" onChange={(event) => {
                             setProp(event.target.value)
                           }}  placeholder="Enter Property Name"/>
         <textarea col="500" rows="3" onChange={(event) => {
                             setFeed(event.target.value)
-                          }} className="form-control form-control-lg"></textarea>
+                          }} className="form-control form-control-lg" placeholder='Leave Your Feedback Here!'></textarea>
     </div>
-    <button type='reset' onClick={craeteUser} >Post Feedback</button></form>
+    <button type='reset'className="btn btn-warning btn-lg ms-2" onClick={craeteUser} >Post Feedback</button></form>
   </section>
             </>
         )
