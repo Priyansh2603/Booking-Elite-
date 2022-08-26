@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { useState, useEffect, useRef } from 'react';
-// import './App.css';
-import { db } from '../Main/firebase-config';
+// import "./src/App.css"
+import { db } from "../Main/firebase-config"
 import { collection, getDocs, addDoc } from 'firebase/firestore'
 function App() {
   const [users, setUser] = useState([])
@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="App">
 
-      <form method='POST' className='items-center'>
+      <form method='POST' className='items-center register'>
         <div className="h-100 bg-dark" id="Registration">
           <div className="container py-5 h-100">
             <div className="row d-flex justify-content-center align-items-center h-100">
@@ -62,14 +62,14 @@ function App() {
                 <div className="card card-registration my-4">
                   <div className="row g-0">
                     <div className="col-xl-6 d-none d-xl-block">
-                      <img className='img-fluid' src='img/reg.jpg' />
+                      <img className='img-fluid' src='https://unsplash.com/developers' />
                     </div>
                     <div className="col-xl-6">
                       <div className="card-body p-md-5 text-black">
                         <h2 className="mb-2 text-uppercase">Owner's Registration Form</h2>
                         {/* <h6 className="mb-4 ">Curious which components explicitly require our JavaScript and Popper? Click the show components link below. </h6> */}
                         <div className="row">
-                          <div className="form-outline mb-4">
+                          <div className="form-outline mb-2">
                             <div className="form-outline">
                               <input type='text' name='Name' className="form-control form-control-lg items-center" onChange={(event) => {
                                 setnewName(event.target.value)
@@ -77,7 +77,7 @@ function App() {
 
                             </div>
                           </div>
-                          <div className="form-outline mb-4">
+                          <div className="form-outline mb-2">
                             <div className="form-outline">
                               <input type="text" id="form3Example1n" onChange={(event) => {
                                 setnewPropname(event.target.value)
@@ -89,12 +89,12 @@ function App() {
 
 
 
-                        <div className="form-outline mb-4">
+                        <div className="form-outline mb-2">
                           <input type='number' name='Age' className="form-control form-control-lg" onChange={(event) => {
                             setnewContact(event.target.value)
                           }} placeholder='Contact No.' />
                         </div>
-                        <div className="form-outline mb-4">
+                        <div className="form-outline mb-2">
                           <input type='number' name='Age' className="form-control form-control-lg" onChange={(event) => {
                             setnewEmg(event.target.value)
                           }} placeholder='Emergency Contact' />
@@ -119,13 +119,13 @@ function App() {
                           </div>
                         </div>
 
-                        <div className="form-outline mb-4">
+                        <div className="form-outline mb-2">
                           <input type='text' name='Address' className="form-control form-control-lg" onChange={(event) => {
                             setnewAddress(event.target.value)
                           }} placeholder='Enter Address...' />
                         </div>
 
-                        <div className="form-outline mb-4">
+                        <div className="form-outline mb-2">
                           <input type="number" id="form3Example90" onChange={(event) => {
                             setnewPin(event.target.value)
                           }} className="form-control form-control-lg" placeholder='Pincode' />
@@ -143,8 +143,8 @@ function App() {
                           }} placeholder='Youtube Link for Ramps' />
                         </div>
                         <div className="form-outline mb-4">
-                          <label className='m-4'>Upload Image</label>
-                        <input class="file-upload-input ml-8" type="file" accept="Image/" onChange={(event) => { setnewImage(event.target.value) }}/>
+                          
+                        <input className="form-control form-control-lg" placeholder='Enter Google Drive Link' onChange={(event) => { setnewImage(event.target.value) }}/>
                         </div>
                         <div className="form-outline mb-4">
                           <input type='link' name='Link' className="form-control form-control-lg" onChange={(event) => {
@@ -164,7 +164,7 @@ function App() {
 
 
                         <div className="d-flex justify-content-end pt-3">
-                          <button onClick={playVideo} className="btn btn-info btn-lg ms-2">Help</button>
+                          <button onClick={playVideo} className="btn btn-info btn-lg h-5 ms-2">Help</button>
                           <button type="reset" className="btn btn-secondary btn-lg ms-2">Reset all</button>
                           <button type='reset' onClick={craeteUser} className="btn btn-warning btn-lg ms-2">Submit form</button>
                         </div>
