@@ -146,9 +146,9 @@ const Hello = () => {
         }
     return (<>
         <span><h1>Place: {i.Property_Name}</h1></span>
-        <span><h3>Address: {i.Address}</h3></span>
-        <h3>Contact: {i.Contact}</h3>
-        <h4>Emergency Contact: {i.Emg}</h4>
+        <span><h1>Address: {i.Address}</h1></span>
+        <h1>Contact: {i.Contact}</h1>
+        <h1>Emergency Contact: {i.Emg}</h1>
            
             <section>
    
