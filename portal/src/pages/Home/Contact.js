@@ -7,7 +7,7 @@ export default function Contact() {
 
         <div className="section-title">
             <h2>Contact</h2>
-            <p>We can't just sit back and wait for feedback to be offered, particularly when we're in a leadership role. If we want feedback to take root in the culture, we need to explicitly ask for it.</p>
+            <p ><b>We can't just sit back and wait for feedback to be offered, particularly when we're in a leadership role. If we want feedback to take root in the culture, we need to explicitly ask for it.</b></p>
         </div>
 
         <div className="row">

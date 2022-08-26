@@ -8,7 +8,7 @@ export default function Services() {
 
         <div className="section-title">
             <h2>Search Your Destiny</h2>
-            <p>“My advice to other disabled people would be, concentrate on things your disability doesn’t prevent you doing well, and don’t regret the things it interferes with. Don’t be disabled in spirit as well as physically.”</p>
+            <p><b color='black'>My advice to other disabled people would be, concentrate on things your disability doesn’t prevent you doing well, and don’t regret the things it interferes with. Don’t be disabled in spirit as well as physically.”</b>“</p>
         </div>
         <div className="absolute inset-0 bg-gray-300 mb-10">
             <iframe className="mb-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10316588.93044109!2d76.70377613363094!3d21.44451256188466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1661093592389!5m2!1sen!2sin" width="1280" height="650"  loading="fast"></iframe>

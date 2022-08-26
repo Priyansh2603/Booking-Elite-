@@ -1510,3 +1510,33 @@ p{
   .navbar.fixed{
     transition: .3s ease-in-out;
   }
+  .p{
+      color: #090909;
+  }
+  .why-us .content-item p{
+    color: #090909;
+  }
+  .why-us .content-item h4{
+  font-weight: bold;
+  }
+  #header{
+    font-weight: bold;
+  }
+  #chetna{
+    font-weight: bold;
+  }
+  #destination{
+    color: #090909;
+    font-weight: bold;
+  }
+  #about1{
+    
+    font-weight: bold;
+  }
+  #registration{
+    margin-right: auto;
+    background-image: url();
+    
+  }
+
+  

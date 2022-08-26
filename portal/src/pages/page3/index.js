@@ -13,7 +13,7 @@ export default function Nav() {
      <header id="header" className={`d-flex align-items-center fixed-top `}>
                 <div className="container d-flex align-items-center">
                 <img className="mx-4 my-2" width="80" height="70" src="/assets/img/swa.png" alt="" />
-                    <h1 className="logo ms-1 me-auto"><a href="/"><h1><span id="blue">CHETNA</span></h1></a></h1>
+                    <h1 className="logo ms-1 me-auto"><a href="/"><h1 id="chetna"><span id="blue">CHETNA</span></h1></a></h1>
 
                     <nav id="navbar" className="navbar ">
                         <ul>
