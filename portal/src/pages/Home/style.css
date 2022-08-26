@@ -8,27 +8,27 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
+.App body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
 
-a {
+.App a {
   text-decoration: none;
   color: #5cb874;
 }
 
-a:hover {
+.App a:hover {
   color: #80c792;
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.App h1,
+.App h2,
+.App h3,
+.App h4,
+.App h5,
+.App h6 {
   font-family: "Raleway", sans-serif;
 }
 /* for logo designing */
@@ -38,7 +38,7 @@ h6 {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-.back-to-top {
+.App .back-to-top {
   position: fixed;
   visibility: hidden;
   opacity: 0;
@@ -52,18 +52,18 @@ h6 {
   transition: all 0.4s;
 }
 
-.back-to-top i {
+.App .back-to-top i {
   font-size: 24px;
   color: #fff;
   line-height: 0;
 }
 
-.back-to-top:hover {
+.App .back-to-top:hover {
   background: #78c48c;
   color: #fff;
 }
 
-.back-to-top.active {
+.App .back-to-top.active {
   visibility: visible;
   opacity: 1;
 }

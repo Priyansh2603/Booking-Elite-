@@ -1,74 +1,72 @@
-h1{
+.container-Hello h1 {
     font-size: 30px;
     color: #fff;
     text-transform: uppercase;
     font-weight: 300;
     text-align: center;
     margin-bottom: 15px;
-  }
-h2{
+}
+.container-Hello h2 {
     font-size: 15px;
     color: #fff;
-    
+
     font-weight: 300;
     text-align: center;
     margin-bottom: 15px;
-  }
-h3{
+}
+.container-Hello h3 {
     font-size: 10px;
     color: #fff;
-    
+
     font-weight: 300;
     text-align: center;
     margin-bottom: 15px;
-  }
-  table{
-    width:100%;
+}
+.container-Hello table {
+    width: 100%;
     table-layout: fixed;
-  }
-  .tbl-header{
-    background-color: rgba(255,255,255,0.3);
-   }
-  .tbl-content{
-    height:300px;
-    overflow-x:auto;
+}
+.container-Hello .tbl-header {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.container-Hello .tbl-content {
+    height: 300px;
+    overflow-x: auto;
     margin-top: 0px;
-    border: 1px solid rgba(255,255,255,0.3);
-  }
-  th{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.container-Hello th {
     padding: 20px 15px;
     text-align: left;
     font-weight: 500;
     font-size: 12px;
     color: #fff;
     text-transform: uppercase;
-  }
-  td{
+}
+.container-Hello td {
     padding: 15px;
     text-align: left;
-    vertical-align:middle;
+    vertical-align: middle;
     font-weight: 300;
     font-size: 25px;
     color: #fff;
-    border-bottom: solid 1px rgba(255,255,255,0.1);
-  }
-  
-  
-  /* demo styles */
-  
-  @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-  body{
+    border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
     background: -webkit-linear-gradient(left, #25c481, #25b7c4);
     background: linear-gradient(to right, #25c481, #25b7c4);
-    font-family: 'Roboto', sans-serif;
-  }
-  section{
+    font-family: "Roboto", sans-serif;
+}
+.container-Hello section {
     margin: 50px;
-  }
-  
-  
-  /* follow me template */
-  .made-with-love {
+}
+
+/* follow me template */
+.container-Hello .made-with-love {
     margin-top: 40px;
     padding: 10px;
     clear: left;
@@ -76,38 +74,37 @@ h3{
     font-size: 10px;
     font-family: arial;
     color: #fff;
-  }
-  .made-with-love i {
+}
+.container-Hello .made-with-love i {
     font-style: normal;
-    color: #F50057;
+    color: #f50057;
     font-size: 14px;
     position: relative;
     top: 2px;
-  }
-  .made-with-love a {
+}
+.container-Hello .made-with-love a {
     color: #fff;
     text-decoration: none;
-  }
-  .made-with-love a:hover {
+}
+.container-Hello .made-with-love a:hover {
     text-decoration: underline;
-  }
-  
-  
-  /* for custom scrollbar for webkit browser*/
-  
-  ::-webkit-scrollbar {
-      width: 6px;
-  } 
-  ::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-  } 
-  ::-webkit-scrollbar-thumb {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-  }
-  button {
+}
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.container-Hello button {
     border-radius: 20px;
-    border: 1px solid #F2eee3;
-    background-color: #F2eee3;
+    border: 1px solid #f2eee3;
+    background-color: #f2eee3;
     color: black;
     font-size: 12px;
     font-weight: bold;
@@ -116,5 +113,4 @@ h3{
     text-transform: uppercase;
     transition: transform 80ms ease-in;
     border-color: red;
-  }
- 
+}
