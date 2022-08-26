@@ -17,12 +17,14 @@ let name=["Hey","Hi","Hello"];
 //             </>
 //         )
 // })
+
 const Hello = () => {
     const { value } = useParams();
     // console.log(value); 
 
     const useCollection = collection(db, 'users-1')
     const [users, setUser] = useState([])
+    const [feed, setFeed]=useState('')
     React.useEffect(() => {
         const getUsers = async () => {
             const data = await getDocs(useCollection);
@@ -33,7 +35,15 @@ const Hello = () => {
         getUsers();
         // find();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, []);
+    const updateUser=async()=>{
+        let collectionRef = db.collection('users-1');
+
+
+        collectionRef.update({feedback:feed}).then(res => {
+        console.log(`Document updated at ${res.updateTime}`);
+      });
+    }
 
     // const find = () => {
     //     // eslint-disable-next-line no-lone-blocks
@@ -135,16 +145,17 @@ const Hello = () => {
             Braille_B= "Watch videos/photos";
         }
     return (<>
-        <h1>{i.Property_Name}</h1>
-        <h3>{i.Address}</h3>
-        <h3>{i.Contact}</h3>
+        <span><h1>Place: {i.Property_Name}</h1></span>
+        <span><h3>Address: {i.Address}</h3></span>
+        <h3>Contact: {i.Contact}</h3>
+        <h4>Emergency Contact: {i.Emg}</h4>
            
             <section>
    
     
     <div>
-        <h1><span id="property_type1">{Lift}</span></h1>
-        <h2><span id="property_type2"></span></h2>
+        {/* <h1><span id="property_type1"></span></h1>
+        <h2><span id="property_type2"></span></h2> */}
         <table>
           <thread>
           <tr>
@@ -187,7 +198,7 @@ const Hello = () => {
               {Lift_A}
             </td>
             <td>
-            <a href="" id="vid1"></a>
+            <a href="" id="vid1">{Lift_B}</a>
             </td>
           </tr>
           <tr>
@@ -221,7 +232,7 @@ const Hello = () => {
             </td>
           </tr>
           <tr>
-            <td>Braille Synage</td>
+            <td>Braille Signage</td>
             <td id='f5'>{Braille}</td>
             <td id="A5">
               {Braille_A}
@@ -237,6 +248,14 @@ const Hello = () => {
     </div>
     <button className="btn btn-info btn-lg ms-2"><a href={`http://maps.google.com/?q=${i.Address}`} target="_blank">Go to Location</a></button>
             <button className="btn btn-warning btn-lg ms-2"><a href={`https://book.olacabs.com/?serviceType=p2p&when=NOW&utm_source=widget_on_olacabs&pickup_name=Current%20Location&drop_lat=10.8945458&drop_lng=76.9970671&drop_name="${i.Address}"&pickup=current_location`} target="_blank">Cab Service</a></button>
+            <button className="btn btn-success btn-lg ms-2">Review And Feedback</button>
+    {/* <textarea></textarea> */}
+   <form> <div className="form-outline mb-4">
+        <textarea col="500" rows="3" className="form-control form-control-lg"></textarea>
+    </div>
+    <button type='reset' onClick={updateUser} onChange={(event) => {
+                            setFeed(event.target.value)
+                          }}>Post Feedback</button></form>
   </section>
             </>
         )
