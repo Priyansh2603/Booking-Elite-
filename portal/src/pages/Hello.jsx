@@ -220,7 +220,7 @@ const Hello = () => {
               {Lift_A}
             </td>
             <td>
-            <a href="" id="vid1">{Lift_B}</a>
+            <a href={i.Lift} target="_blank" id="vid1">{Lift_B}</a>
             </td>
           </tr>
           <tr>
@@ -230,7 +230,7 @@ const Hello = () => {
               {Ramp_A}
             </td>
             <td>
-            <a onClick="link2()"  id="vid2">{Ramp_B}</a>
+            <a onClick="link2()" href={i.Ramp} target="_blank" id="vid2">{Ramp_B}</a>
             </td>
           </tr>
           <tr>
@@ -240,7 +240,7 @@ const Hello = () => {
               {Wheelchair_A}
             </td>
             <td>
-            <a onClick="link3()" id="vid3">{Wheelchair_B}</a>
+            <a onClick="link3()" href={i.Wheelchair} target="_blank" id="vid3">{Wheelchair_B}</a>
             </td>
           </tr>
           <tr>
@@ -250,7 +250,7 @@ const Hello = () => {
               {Washroom_A}
             </td>
             <td>
-            <a onClick="link4()" id="vid4">{Washroom_B}</a>
+            <a onClick="link4()" href={i.Washroom} target="_blank" id="vid4">{Washroom_B}</a>
             </td>
           </tr>
           <tr>
@@ -260,7 +260,7 @@ const Hello = () => {
               {Braille_A}
             </td>
             <td>
-            <a onClick="link5()" id="vid5">{Braille_B}</a>
+            <a onClick="link5()" href={i.Braille} target="_blank" id="vid5">{Braille_B}</a>
             </td>
           </tr>
           
